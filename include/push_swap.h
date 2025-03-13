@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:14:18 by tsaby             #+#    #+#             */
-/*   Updated: 2025/02/18 13:35:07 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 10:59:30 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ t_node				*get_last_node(t_node *stack);
 void				free_stack(t_node **stack);
 
 int					index_values(t_node *stack);
-void				sorts_tab(t_node **stack_a, t_node **stack_b);
 void				three(t_node **stack_a);
-
+int					is_sorted(t_node **stack_a);
 #endif

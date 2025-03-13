@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:21 by tsaby             #+#    #+#             */
-/*   Updated: 2025/02/18 13:22:24 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 10:08:57 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	initialize_stack(int argc, char **argv, t_node **stack_a)
 	{
 		if (is_valid_number(argv[i]))
 		{
-			write(2, "Error,invalid number\n", 22);
+			write(2, "Error\n", 7);
 			free_stack(stack_a);
 			return (1);
 		}
@@ -107,16 +107,18 @@ int	main(int argc, char **argv)
 			return (0);
 		if (check_duplicates(stack_a))
 		{
-			write(2, "Error,invalid number\n", 22);
+			write(2, "Error\n", 7);
 			free_stack(&stack_a);
 			return (1);
 		}
 		if (!(index_values(stack_a)))
 			return (free_stack(&stack_a), 0);
+		if (is_sorted(&stack_a) == 0)
+			return (free_stack(&stack_a), 0);
 		sorts_tab(&stack_a, &stack_b);
 		free_stack(&stack_a);
 	}
 	else
-		write(2, "Error, arguments\n", 18);
+		write(2, "Error\n", 7);
 	return (0);
 }

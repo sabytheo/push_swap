@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:08:38 by tsaby             #+#    #+#             */
-/*   Updated: 2025/02/18 11:06:43 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 09:59:44 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,18 @@ int	index_values(t_node *stack)
 		stack = stack->next;
 	}
 	return (free(tab), 1);
+}
+
+int	is_sorted(t_node **stack_a)
+{
+	t_node *current;
+
+	current = *stack_a;
+	while(current->next)
+	{
+		if(current->value > current->next->value)
+			return (1);
+		current = current->next;
+	}
+	return (0);
 }
