@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:14:18 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/13 10:59:30 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 17:44:18 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,7 @@ void				free_stack(t_node **stack);
 int					index_values(t_node *stack);
 void				three(t_node **stack_a);
 int					is_sorted(t_node **stack_a);
+void				radix_sort(t_node **stack_a, t_node **stack_b, int size);
+void				sorts(t_node **stack_a, t_node **stack_b);
+
 #endif

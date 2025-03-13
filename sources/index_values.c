@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:08:38 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/13 09:59:44 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 19:10:30 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,12 @@ int	index_values(t_node *stack)
 
 int	is_sorted(t_node **stack_a)
 {
-	t_node *current;
+	t_node	*current;
 
 	current = *stack_a;
-	while(current->next)
+	while (current->next)
 	{
-		if(current->value > current->next->value)
+		if (current->value > current->next->value)
 			return (1);
 		current = current->next;
 	}

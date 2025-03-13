@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:21 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/13 10:08:57 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/13 17:57:30 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ int	main(int argc, char **argv)
 			return (free_stack(&stack_a), 0);
 		if (is_sorted(&stack_a) == 0)
 			return (free_stack(&stack_a), 0);
-		sorts_tab(&stack_a, &stack_b);
+		sorts(&stack_a, &stack_b);
 		free_stack(&stack_a);
 	}
 	else
