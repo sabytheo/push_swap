@@ -6,38 +6,48 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:21 by tsaby             #+#    #+#             */
-/*   Updated: 2025/02/15 11:43:15 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/14 10:03:54 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	get_min(t_node *stack)
-{
-	int	min;
 
-	min = INT_MAX;
-	while (stack)
+long	ft_atol_args(const char *str)
+{
+	int		i;
+	int		sign;
+	long	result;
+
+	i = 0;
+	sign = 1;
+	result = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (stack->value < min)
-			min = stack->value;
-		stack = stack->next;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	return (min);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 
-int	get_max(t_node *stack)
+int overflow_check(const char *str)
 {
-	int	max;
+	long nb;
 
-	max = INT_MIN;
-	while (stack)
-	{
-		if (stack->value > max)
-			max = stack->value;
-		stack = stack->next;
-	}
-	return (max);
+	if (ft_strlen(str) > 11)
+		return (1);
+	nb = ft_atol_args(str);
+	if (nb > INT_MAX || nb < INT_MIN)
+		return(1);
+	return(0);
 }
 
 int	stack_size(t_node *stack)

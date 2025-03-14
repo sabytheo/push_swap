@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 13:14:18 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/13 17:44:18 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/14 09:57:21 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ void				both_reverse_rotate(t_node **stack_a, t_node **stack_b);
 
 // UTILS
 
-int					get_min(t_node *stack);
-int					get_max(t_node *stack);
+int					overflow_check(const char *str);
 int					stack_size(t_node *stack);
 void				print_stack(t_node *stack, char *name);
 t_node				*get_last_node(t_node *stack);
