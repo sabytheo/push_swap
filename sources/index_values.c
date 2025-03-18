@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:08:38 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/13 19:10:30 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/18 15:51:57 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	index_values(t_node *stack)
 		return (0);
 	tab = fill_tab(&stack, size);
 	if (!tab)
-		return (free_stack(&stack), 0);
+		return (0);
 	tab = sort_tab(tab, size);
 	while (stack)
 	{
