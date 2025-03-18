@@ -6,12 +6,11 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:21 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/14 10:03:54 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/18 10:41:59 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 long	ft_atol_args(const char *str)
 {
@@ -38,16 +37,16 @@ long	ft_atol_args(const char *str)
 	return (result * sign);
 }
 
-int overflow_check(const char *str)
+int	overflow_check(const char *str)
 {
-	long nb;
+	long	nb;
 
 	if (ft_strlen(str) > 11)
 		return (1);
 	nb = ft_atol_args(str);
 	if (nb > INT_MAX || nb < INT_MIN)
-		return(1);
-	return(0);
+		return (1);
+	return (0);
 }
 
 int	stack_size(t_node *stack)

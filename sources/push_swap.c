@@ -6,7 +6,7 @@
 /*   By: tsaby <tsaby@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:24:21 by tsaby             #+#    #+#             */
-/*   Updated: 2025/03/14 11:39:34 by tsaby            ###   ########.fr       */
+/*   Updated: 2025/03/18 10:42:58 by tsaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,7 @@ int	is_valid_number(const char *str)
 	i = 0;
 	if (!str || !*str)
 		return (1);
-	while (str[i] == ' ')
-		i++;
-	if(overflow_check(str) > 0)
+	if (overflow_check(str) > 0)
 		return (1);
 	if ((str[i] == '-' || str[i] == '+') && str[i + 1] == '\0')
 		return (1);
